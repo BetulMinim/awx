@@ -3,7 +3,7 @@ region: East US 2
 auth_source: auto
 plain_host_names: yes
 filters:
-tag:description: awx-test
+  tag:description: awx-test
 include_vm_resource_groups:
   - Anthony_test
 # exclude_host_filters:
