@@ -6,11 +6,11 @@ include_vm_resource_groups:
 # exclude_host_filters:
 # - powerstate != 'running'
 keyed_groups:
-# - prefix: tag
-#   key: tags
-# - prefix: azure_location
-#   key: location
-  - key: tags.description
+- prefix: tag
+  key: tags
+- prefix: azure_location
+  key: location
+- key: tags.description
 hostvar_expressions:
   ansible_host: private_ipv4_addresses | first
 conditional_groups:
