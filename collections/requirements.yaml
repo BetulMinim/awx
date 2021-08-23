@@ -1,0 +1,4 @@
+
+# Tower automatically installs these collections when project syncs
+collections:
+  - name: azure.azcollection
