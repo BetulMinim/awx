@@ -18,5 +18,5 @@ hostvar_expressions:
   ansible_host: private_ipv4_addresses | first
 compose:
   ansible_user: "'betul'"
-default_host_filters:
-- tags.description: 'awx-test'
+# default_host_filters:
+# - tags.description: 'awx-test'
