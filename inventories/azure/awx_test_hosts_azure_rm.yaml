@@ -1,6 +1,6 @@
 plugin: azure_rm
 auth_source: auto
-plain_host_names: yes
+# plain_host_names: yes
 include_vm_resource_groups:
   - Anthony_test
 # exclude_host_filters:
@@ -14,6 +14,10 @@ conditional_groups:
 keyed_groups:
 - prefix: awx_
   key: tags['description']
+- prefix: tag
+  key: tags
+- prefix: azure_location
+  key: location
 hostvar_expressions:
   ansible_host: private_ipv4_addresses | first
 compose:
