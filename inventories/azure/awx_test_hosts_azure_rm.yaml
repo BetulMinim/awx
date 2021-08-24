@@ -19,4 +19,4 @@ hostvar_expressions:
 compose:
   ansible_user: "'betul'"
 default_host_filters:
-- tags.description : 'awx-testing'
+- tags.description : 'awx-test'
