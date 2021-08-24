@@ -1,10 +1,6 @@
-plugin: azure.azcollection.azure_rm
-default_host_filters:
-- location in ['eastUS2']
+plugin: azure_rm
 auth_source: auto
 plain_host_names: yes
-filters:
-  tag:description: awx-test
 include_vm_resource_groups:
   - Anthony_test
 # exclude_host_filters:
@@ -13,7 +9,7 @@ conditional_groups:
   # since this will be true for every host, every host sourced from this inventory plugin config will be in the
   # group 'all_the_hosts'
   all_the_hosts: true
-  # if the VM's "name" variable contains "dbserver", it will be placed in the 'db_hosts' group
+  # if the VM's "name" variable contains "awx", it will be placed in the 'awx' group
   awx_hosts: "'awx' in name"
 keyed_groups:
 - prefix: awx_
