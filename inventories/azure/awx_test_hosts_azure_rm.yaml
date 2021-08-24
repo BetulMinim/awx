@@ -1,6 +1,6 @@
 plugin: azure_rm
 auth_source: auto
-# plain_host_names: yes
+plain_host_names: yes
 include_vm_resource_groups:
   - Anthony_test
 # exclude_host_filters:
@@ -10,15 +10,13 @@ conditional_groups:
   # group 'all_the_hosts'
   all_the_hosts: true
   # if the VM's "name" variable contains "awx", it will be placed in the 'awx' group
-  awx_hosts: "'awx' in name"
+  # awx_hosts: "'awx' in name"
 keyed_groups:
 - prefix: awx_
   key: tags['description']
-- prefix: tag
-  key: tags
-- prefix: azure_location
-  key: location
 hostvar_expressions:
   ansible_host: private_ipv4_addresses | first
 compose:
   ansible_user: "'betul'"
+exclude_host_filters:
+- tags.description != 'awx'
