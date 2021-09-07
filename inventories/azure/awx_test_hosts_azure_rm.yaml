@@ -12,8 +12,8 @@ conditional_groups:
   # if the VM's "name" variable contains "awx", it will be placed in the 'awx' group
   # awx_hosts: "'awx' in name"
 keyed_groups:
-- prefix: awx_
-  key: tags['description']
+- prefix: ""
+  key: tags.description
 hostvar_expressions:
   ansible_host: private_ipv4_addresses | first
 compose:

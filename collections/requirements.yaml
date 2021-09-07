@@ -1,4 +1,8 @@
 
 # Tower automatically installs these collections when project syncs
 collections:
-  - name: azure.azcollection
+  - name: azure.azcollection 
+roles:
+  - name: geerlingguy.java
+    version: 1.9.6
+  
